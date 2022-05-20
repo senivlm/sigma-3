@@ -46,8 +46,37 @@ public class Product {
         Weight = _weight;
     }
 
+    public virtual void changePrice(double percent){
+        if(percent > 100 || percent < -100){
+            throw new ArgumentException("price can't be negative");
+        }
+        price += price * 0.01 * percent;
+    }
+
      public override string ToString()
     {
         return $"[Name: {name}; Price: ${price}; Weight: {weight}kg.]";
     }
+
+    public override bool Equals(object? obj)
+    {
+        var _product = obj as Product;
+        if(_product == null){
+            return false;
+        }
+        return name == _product.name && price == _product.price && weight == _product.weight;
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(name, weight, price);
+    }
+
+    //Unlike the Equals method and the equality operator, the ReferenceEquals method cannot be overridden
+    //https://docs.microsoft.com/en-us/dotnet/api/system.object.referenceequals?view=net-6.0
+
+    //The C# compiler does not allow you to override the Finalize method.
+    //https://docs.microsoft.com/en-us/dotnet/api/system.object.finalize?view=net-6.0
+
+    //GetType is not virtual
 }

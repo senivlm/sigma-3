@@ -4,32 +4,31 @@ using System.Linq;
 
 public class Buy
 {
-    private List<Product> purchases;
     public List<Product> Purchases 
     {
-        get => purchases; 
-        private set {purchases = value;}
+        get;
+        private set;
     }
     public double totalPrice => Purchases.Sum(product => product.Price);
-    public double totalWeight => Purchases.Sum(product => product.Price);
+    public double totalWeight => Purchases.Sum(product => product.Weight);
     public int totalAmount => Purchases.Count;
     public Buy()
     {
-        purchases = new List<Product>();
+        Purchases = new List<Product>();
     }
 
     public Buy(List<Product> products)
     {
-        purchases = products;
+        Purchases = products;
     }
 
     public void addProduct(Product toAdd)
     {
-        purchases.Add(toAdd);
+        Purchases.Add(toAdd);
     }
 
     public void removeProduct(Product toRemove)
     {
-        purchases.Remove(toRemove);
+        Purchases.Remove(toRemove);
     }
 }
