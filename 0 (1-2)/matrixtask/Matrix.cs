@@ -44,7 +44,7 @@ namespace Task0;
             Directions direction = Directions.RIGHT;
 
             for(fill = 1;fill <= matrix.Length; fill++){
-                matrix[row,col] = fill;
+                matrix[col,row] = fill;
                 switch(direction){
                     case Directions.RIGHT:{
                         Console.WriteLine("right");
