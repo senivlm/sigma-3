@@ -2,6 +2,15 @@
 
 class Program{
     public static void Main(string[]args){
+       matrixTask(); 
+    }
+
+    private static void matrixTask(){
+        Matrix matrix = new Matrix(4,4);
+        matrix.fillDioganalSnake();
+        matrix.printMatrix();
+    }
+    private static void foodTask(){
         // Buy buy = new Buy();
         // Product a = new Product("a", 11,0.3);
         // Product b = new Product("b",1,1);
