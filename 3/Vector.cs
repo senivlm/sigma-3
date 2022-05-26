@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1;
+namespace Task3;
     class Vector
     {
         private int[] array;

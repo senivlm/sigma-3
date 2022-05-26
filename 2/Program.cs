@@ -1,4 +1,5 @@
-﻿namespace Task0;
+﻿using Task2.Subtask1;
+using Task2.Subtask2;
 
 class Program{
     public static void Main(string[]args){
@@ -34,3 +35,4 @@ class Program{
         // Console.WriteLine(Storage.getByIndex(3));
     }
 }
+

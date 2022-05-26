@@ -1,4 +1,4 @@
-namespace Task0;
+namespace Task2.Subtask1;
 
 static class Storage{
     private static List<Product> products = new List<Product>();

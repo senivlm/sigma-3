@@ -1,4 +1,4 @@
-namespace Task0;
+namespace Task2.Subtask1;
 
 class Dairy_products : Product{
     public int ExpDate {get; private set;}

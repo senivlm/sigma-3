@@ -1,4 +1,5 @@
-namespace Task0;
+namespace Task2.Subtask1;
+
 
 public enum MeatGrade : ushort {Highest = 10, Grade_1 = 5, Grade_2 = 3};
 public enum MeatType {Mutton, Beef, Pork, Chicken};

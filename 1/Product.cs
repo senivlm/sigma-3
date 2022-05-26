@@ -1,4 +1,4 @@
-namespace Task0;
+namespace Task1;
 //aka IProduct
 public class Product {
     protected string name;

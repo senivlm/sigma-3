@@ -1,4 +1,4 @@
-namespace Task0;
+namespace Task1;
 
 static class Check{
     public static void showProduct(Product toShow){
