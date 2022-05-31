@@ -22,7 +22,7 @@ namespace Task4;
                 }
             }
             set 
-            {
+            {// теж має бути контроль індексів
                 array[index] = value;
             }
         }
@@ -86,7 +86,7 @@ namespace Task4;
             }
             unsafeQuickSort(start, end);
         }
-        
+        // слід було параметром передавати можливість вибору опорного елемента, а також напряму сортування
         private void unsafeQuickSort(int start, int end){
             int i = start;
             int j = end;
@@ -152,6 +152,7 @@ namespace Task4;
             {
                 int start = i;
                 int end = i + 1;
+                //збільштли складність алгоритму
                 for (int j = i + 1; j < array.Length; j++)
                 {
                     if (array[i] == array[j])
